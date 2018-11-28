@@ -1,5 +1,5 @@
-from network import Router, Host
-from link import Link, LinkLayer
+from network_1 import Router, Host
+from link_1 import Link, LinkLayer
 import threading
 from time import sleep
 import sys
@@ -19,9 +19,9 @@ if __name__ == '__main__':
     object_L.append(host_2)
     
     #create routers and routing tables for connected clients (subnets)
-    encap_tbl_D = {}    # table used to encapsulate network packets into MPLS frames
-    frwd_tbl_D = {}     # table used to forward MPLS frames
-    decap_tbl_D = {}    # table used to decapsulate network packets from MPLS frames
+    encap_tbl_D = {0:True, 1:False} #format= in_interface#:encapsulate? #table used to encapsulate network packets into MPLS frames
+    frwd_tbl_D = {0:True, 1:False} #format= in_interface#:forward?    # table used to forward MPLS frames
+    decap_tbl_D = {0:False, 1:True} #format= in_interface#:decapsulate?   # table used to decapsulate network packets from MPLS frames
     router_a = Router(name='RA', 
                               intf_capacity_L=[500,500],
                               encap_tbl_D = encap_tbl_D,
@@ -30,9 +30,9 @@ if __name__ == '__main__':
                               max_queue_size=router_queue_size)
     object_L.append(router_a)
 
-    encap_tbl_D = {}    
-    frwd_tbl_D = {}     
-    decap_tbl_D = {}    
+    encap_tbl_D = {0:False, 1:True} #format= in_interface#:encapsulate?   
+    frwd_tbl_D = {0:False, 1:True} #format= in_interface#:forward?    
+    decap_tbl_D = {0:True, 1:False} #format= in_interface#:decapsulate?   
     router_b = Router(name='RB', 
                               intf_capacity_L=[500,100],
                               encap_tbl_D = encap_tbl_D,
