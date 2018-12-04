@@ -20,7 +20,7 @@ if __name__ == '__main__':
     
     #create routers and routing tables for connected clients (subnets)
     encap_tbl_D = {0:True, 1:False} #format= in_interface#:encapsulate? #table used to encapsulate network packets into MPLS frames
-    frwd_tbl_D = {0:True, 1:False} #format= in_interface#:forward?    # table used to forward MPLS frames
+    frwd_tbl_D = {0:False, 0:True, 1:False, 1:True} #format= in_interface#:forward?    # table used to forward MPLS frames
     decap_tbl_D = {0:False, 1:True} #format= in_interface#:decapsulate?   # table used to decapsulate network packets from MPLS frames
     router_a = Router(name='RA', 
                               intf_capacity_L=[500,500],
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     object_L.append(router_a)
 
     encap_tbl_D = {0:False, 1:True} #format= in_interface#:encapsulate?   
-    frwd_tbl_D = {0:False, 1:True} #format= in_interface#:forward?    
+    frwd_tbl_D = {0:False, 0:True, 1:True, 1:False} #format= in_interface#:forward?    
     decap_tbl_D = {0:True, 1:False} #format= in_interface#:decapsulate?   
     router_b = Router(name='RB', 
                               intf_capacity_L=[500,100],

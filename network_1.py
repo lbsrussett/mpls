@@ -98,7 +98,7 @@ class MPLSFrame:
     ## convert packet to a byte string for transmission over links
     def to_byte_S(self):
         byte_S = str(self.label)
-        byte_S = str(self.ttl).zfill(self.ttl_length)
+        byte_S += str(self.ttl).zfill(self.ttl_length)
         byte_S += self.data_S
         return byte_S
     
@@ -107,7 +107,7 @@ class MPLSFrame:
     @classmethod
     def from_byte_S(self, byte_S):
         label = byte_S[0 : MPLSFrame.lab_length]
-        ttl = byte_S[MPLSFrame.lab_length : MPLSFrame.ttl_length]
+        ttl = byte_S[MPLSFrame.lab_length : MPLSFrame.ttl_length+MPLSFrame.lab_length]
         data_S = byte_S[MPLSFrame.lab_length+MPLSFrame.ttl_length : ]        
         return self(label, ttl, data_S)    
 
@@ -231,14 +231,14 @@ class Router:
     #  @param m_fr: MPLS frame to process
     #  @param i Incoming interface number for the frame
     def process_MPLS_frame(self, m_fr, i):
-        print('%s: processing MPLS frame "%s"' % (self, m_fr))
-        forward = self.frwd_tbl_D.get(i)
+        print('%s: processing MPLS frame "%s"' % (self, m_fr.__str__()))
+        print("forward " + str(forward))
         if forward:
             pkt = m_fr
             fr = LinkFrame('MPLS', pkt.to_byte_S())
         decap = self.decap_tbl_D.get(i)
         if decap:
-            pkt = NetworkPacket.from_byte_S(m_fr.data_S)
+            pkt = NetworkPacket.from_byte_S(m_fr.data_S.__str__())
             print('%s: decapsulated packet "%s" from MPLS frame "%s"' % (self, pkt, m_fr))
             fr = LinkFrame('Network', pkt.to_byte_S())
         
