@@ -1,5 +1,5 @@
-from network_2 import Router, Host
-from link_2 import Link, LinkLayer
+from network_3 import Router, Host
+from link_3 import Link, LinkLayer
 import threading
 from time import sleep
 import sys
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     frwd_tbl_D = {0:True, 1:True} #format= in_interface#:forward?    
     decap_tbl_D = {0:False, 1:False} #format= in_interface#:decapsulate?   
     router_b = Router(name='RB', 
-                              intf_capacity_L=[500,500],
+                              intf_capacity_L=[500,100],
                               encap_tbl_D = encap_tbl_D,
                               frwd_tbl_D = frwd_tbl_D,
                               decap_tbl_D = decap_tbl_D,
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     frwd_tbl_D = {0:False, 1:False} #format= in_interface#:forward?    
     decap_tbl_D = {0:True, 1:True} #format= in_interface#:decapsulate?   
     router_d = Router(name='RD', 
-                              intf_capacity_L=[500,500,500],
+                              intf_capacity_L=[500,500,100],
                               encap_tbl_D = encap_tbl_D,
                               frwd_tbl_D = frwd_tbl_D,
                               decap_tbl_D = decap_tbl_D,
