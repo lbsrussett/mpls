@@ -80,17 +80,23 @@ class Link:
                 if intf_a.next_avail_time <= time.time():
                     #transmit the packet
                     pkt_S = intf_a.get('out')
+                    print("Packet in Link: " + pkt_S)
                     intf_b.put(pkt_S, 'in')
+                    priority = pkt_S[1]
                     #update the next free time of the interface according to serialization delay
                     pkt_size = len(pkt_S)*8 #assuming each character is 8 bits
-                    intf_a.next_avail_time = time.time() + pkt_size/intf_a.capacity                
+                    intf_a.next_avail_time = time.time() + pkt_size/intf_a.capacity
+                    # intf_a.countPriorities()
                     print('%s: transmitting frame "%s" on %s %s -> %s %s \n' \
                           ' - seconds until the next available time %f\n' \
-                          ' - queue size %d' \
-                          % (self, pkt_S, node_a, node_a_intf, node_b, node_b_intf, intf_a.next_avail_time - time.time(), intf_a.out_queue.qsize()))
+                          ' - queue size %d\n' \
+                          ' - Priority 0 Packets %d\n'
+                          ' - Priority 1 Packets %d\n'
+                          % (self, pkt_S, node_a, node_a_intf, node_b, node_b_intf, intf_a.next_avail_time - time.time(), intf_a.out_queue.qsize(), intf_a.priority_0_count, intf_a.priority_1_count))
+                    
                 # uncomment the lines below to see waiting time until next transmission
-#                 else:
-#                     print('%s: waiting to transmit packet on %s %s -> %s, %s for another %f milliseconds' % (self, node_a, node_a_intf, node_b, node_b_intf, intf_a.next_avail_time - time.time()))    
+                # else:
+                #     print('%s: waiting to transmit packet on %s %s -> %s, %s for another %f milliseconds' % (self, node_a, node_a_intf, node_b, node_b_intf, intf_a.next_avail_time - time.time()))    
             except queue.Full:
                 print('%s: packet lost' % (self))
                 pass
