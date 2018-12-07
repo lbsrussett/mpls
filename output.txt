@@ -1,0 +1,364 @@
+Created link Link H1-0 - RA-0
+Created link Link H2-0 - RA-1
+Created link Link RA-2 - RB-0
+Created link Link RA-3 - RC-0
+Created link Link RB-1 - RD-0
+Created link Link RC-1 - RD-1
+Created link Link RD-2 - H3-0
+H1: Starting
+H2: Starting
+H3: Starting
+RA: Starting
+RB: Starting
+RC: Starting
+RD: Starting
+Network: Starting
+H1: sending packet "00H3MESSAGE_0_FROM_H10" with priority 0
+H2: sending packet "00H3MESSAGE_0_FROM_H20" with priority 0
+H1: sending packet "00H3MESSAGE_1_FROM_H11" with priority 1
+H2: sending packet "00H3MESSAGE_1_FROM_H21" with priority 1
+H1: sending packet "00H3MESSAGE_2_FROM_H10" with priority 0
+H2: sending packet "00H3MESSAGE_2_FROM_H20" with priority 0
+H1: sending packet "00H3MESSAGE_3_FROM_H11" with priority 1
+H2: sending packet "00H3MESSAGE_3_FROM_H21" with priority 1
+H1: sending packet "00H3MESSAGE_4_FROM_H10" with priority 0
+H2: sending packet "00H3MESSAGE_4_FROM_H20" with priority 0
+Link H1-0 - RA-0: transmitting frame "N00H3MESSAGE_1_FROM_H11" on H1 0 -> RA 0 
+ - seconds until the next available time 0.367999
+ - queue size 4
+ - Priority 0 Packets 3
+ - Priority 1 Packets 1
+
+Link H2-0 - RA-1: transmitting frame "N00H3MESSAGE_1_FROM_H21" on H2 0 -> RA 1 
+ - seconds until the next available time 0.367999
+ - queue size 4
+ - Priority 0 Packets 3
+ - Priority 1 Packets 1
+
+RA: encapsulated packet "00H3MESSAGE_1_FROM_H11" as MPLS frame "RB00500H3MESSAGE_1_FROM_H11"
+RA: processing MPLS frame "RB00500H3MESSAGE_1_FROM_H11"
+RA: forwarding frame "MRB00500H3MESSAGE_1_FROM_H11" from interface 0 to 1
+RA: encapsulated packet "00H3MESSAGE_1_FROM_H21" as MPLS frame "RB00500H3MESSAGE_1_FROM_H21"
+RA: processing MPLS frame "RB00500H3MESSAGE_1_FROM_H21"
+RA: forwarding frame "MRB00500H3MESSAGE_1_FROM_H21" from interface 1 to 1
+Link RA-2 - RB-0: transmitting frame "MRB00500H3MESSAGE_1_FROM_H11" on RA 2 -> RB 0 
+ - seconds until the next available time 0.447998
+ - queue size 1
+ - Priority 0 Packets 0
+ - Priority 1 Packets 1
+
+RB: processing MPLS frame "RB00500H3MESSAGE_1_FROM_H11"
+RB: forwarding frame "MRB00500H3MESSAGE_1_FROM_H11" from interface 0 to 1
+Link RB-1 - RD-0: transmitting frame "MRB00500H3MESSAGE_1_FROM_H11" on RB 1 -> RD 0 
+ - seconds until the next available time 2.239998
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RD: processing MPLS frame "RB00500H3MESSAGE_1_FROM_H11"
+RD: decapsulated packet "00H3MESSAGE_1_FROM_H11" from MPLS frame "RB00500H3MESSAGE_1_FROM_H11"
+RD: forwarding frame "N00H3MESSAGE_1_FROM_H11" from interface 0 to 1
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_1_FROM_H11" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839999
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_1_FROM_H11"
+Link H1-0 - RA-0: transmitting frame "N00H3MESSAGE_3_FROM_H11" on H1 0 -> RA 0 
+ - seconds until the next available time 0.367998
+ - queue size 3
+ - Priority 0 Packets 3
+ - Priority 1 Packets 0
+
+Link H2-0 - RA-1: transmitting frame "N00H3MESSAGE_3_FROM_H21" on H2 0 -> RA 1 
+ - seconds until the next available time 0.367999
+ - queue size 3
+ - Priority 0 Packets 3
+ - Priority 1 Packets 0
+
+RA: encapsulated packet "00H3MESSAGE_3_FROM_H11" as MPLS frame "RB00500H3MESSAGE_3_FROM_H11"
+RA: processing MPLS frame "RB00500H3MESSAGE_3_FROM_H11"
+RA: forwarding frame "MRB00500H3MESSAGE_3_FROM_H11" from interface 0 to 1
+RA: encapsulated packet "00H3MESSAGE_3_FROM_H21" as MPLS frame "RB00500H3MESSAGE_3_FROM_H21"
+RA: processing MPLS frame "RB00500H3MESSAGE_3_FROM_H21"
+RA: forwarding frame "MRB00500H3MESSAGE_3_FROM_H21" from interface 1 to 1
+Link RA-2 - RB-0: transmitting frame "MRB00500H3MESSAGE_1_FROM_H21" on RA 2 -> RB 0 
+ - seconds until the next available time 0.447998
+ - queue size 2
+ - Priority 0 Packets 0
+ - Priority 1 Packets 2
+
+RB: processing MPLS frame "RB00500H3MESSAGE_1_FROM_H21"
+RB: forwarding frame "MRB00500H3MESSAGE_1_FROM_H21" from interface 0 to 1
+Link H2-0 - RA-1: transmitting frame "N00H3MESSAGE_4_FROM_H20" on H2 0 -> RA 1 
+ - seconds until the next available time 0.367998
+ - queue size 2
+ - Priority 0 Packets 2
+ - Priority 1 Packets 0
+
+Link H1-0 - RA-0: transmitting frame "N00H3MESSAGE_4_FROM_H10" on H1 0 -> RA 0 
+ - seconds until the next available time 0.367999
+ - queue size 2
+ - Priority 0 Packets 2
+ - Priority 1 Packets 0
+
+RA: encapsulated packet "00H3MESSAGE_4_FROM_H10" as MPLS frame "RC00500H3MESSAGE_4_FROM_H10"
+RA: processing MPLS frame "RC00500H3MESSAGE_4_FROM_H10"
+RA: forwarding frame "MRC00500H3MESSAGE_4_FROM_H10" from interface 0 to 1
+RA: encapsulated packet "00H3MESSAGE_4_FROM_H20" as MPLS frame "RC00500H3MESSAGE_4_FROM_H20"
+RA: processing MPLS frame "RC00500H3MESSAGE_4_FROM_H20"
+RA: forwarding frame "MRC00500H3MESSAGE_4_FROM_H20" from interface 1 to 1
+Link RA-3 - RC-0: transmitting frame "MRC00500H3MESSAGE_4_FROM_H10" on RA 3 -> RC 0 
+ - seconds until the next available time 0.447998
+ - queue size 1
+ - Priority 0 Packets 1
+ - Priority 1 Packets 0
+
+RC: processing MPLS frame "RC00500H3MESSAGE_4_FROM_H10"
+RC: forwarding frame "MRC00500H3MESSAGE_4_FROM_H10" from interface 0 to 1
+Link RA-2 - RB-0: transmitting frame "MRB00500H3MESSAGE_3_FROM_H11" on RA 2 -> RB 0 
+ - seconds until the next available time 0.447997
+ - queue size 1
+ - Priority 0 Packets 0
+ - Priority 1 Packets 1
+
+Link RC-1 - RD-1: transmitting frame "MRC00500H3MESSAGE_4_FROM_H10" on RC 1 -> RD 1 
+ - seconds until the next available time 0.447999
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RD: processing MPLS frame "RC00500H3MESSAGE_4_FROM_H10"
+RD: decapsulated packet "00H3MESSAGE_4_FROM_H10" from MPLS frame "RC00500H3MESSAGE_4_FROM_H10"
+RD: forwarding frame "N00H3MESSAGE_4_FROM_H10" from interface 1 to 1
+RB: processing MPLS frame "RB00500H3MESSAGE_3_FROM_H11"
+RB: forwarding frame "MRB00500H3MESSAGE_3_FROM_H11" from interface 0 to 1
+Link H1-0 - RA-0: transmitting frame "N00H3MESSAGE_0_FROM_H10" on H1 0 -> RA 0 
+ - seconds until the next available time 0.367998
+ - queue size 1
+ - Priority 0 Packets 1
+ - Priority 1 Packets 0
+
+RA: encapsulated packet "00H3MESSAGE_0_FROM_H10" as MPLS frame "RC00500H3MESSAGE_0_FROM_H10"
+RA: processing MPLS frame "RC00500H3MESSAGE_0_FROM_H10"
+RA: forwarding frame "MRC00500H3MESSAGE_0_FROM_H10" from interface 0 to 1
+Link H2-0 - RA-1: transmitting frame "N00H3MESSAGE_0_FROM_H20" on H2 0 -> RA 1 
+ - seconds until the next available time 0.367998
+ - queue size 1
+ - Priority 0 Packets 1
+ - Priority 1 Packets 0
+
+RA: encapsulated packet "00H3MESSAGE_0_FROM_H20" as MPLS frame "RC00500H3MESSAGE_0_FROM_H20"
+RA: processing MPLS frame "RC00500H3MESSAGE_0_FROM_H20"
+RA: forwarding frame "MRC00500H3MESSAGE_0_FROM_H20" from interface 1 to 1
+Link RA-3 - RC-0: transmitting frame "MRC00500H3MESSAGE_4_FROM_H20" on RA 3 -> RC 0 
+ - seconds until the next available time 0.447999
+ - queue size 2
+ - Priority 0 Packets 2
+ - Priority 1 Packets 0
+
+Link RA-2 - RB-0: transmitting frame "MRB00500H3MESSAGE_3_FROM_H21" on RA 2 -> RB 0 
+ - seconds until the next available time 0.447999
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RB: processing MPLS frame "RB00500H3MESSAGE_3_FROM_H21"
+RB: forwarding frame "MRB00500H3MESSAGE_3_FROM_H21" from interface 0 to 1
+RC: processing MPLS frame "RC00500H3MESSAGE_4_FROM_H20"
+RC: forwarding frame "MRC00500H3MESSAGE_4_FROM_H20" from interface 0 to 1
+Link RC-1 - RD-1: transmitting frame "MRC00500H3MESSAGE_4_FROM_H20" on RC 1 -> RD 1 
+ - seconds until the next available time 0.447998
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+Link H1-0 - RA-0: transmitting frame "N00H3MESSAGE_2_FROM_H10" on H1 0 -> RA 0 
+ - seconds until the next available time 0.367999
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+Link H2-0 - RA-1: transmitting frame "N00H3MESSAGE_2_FROM_H20" on H2 0 -> RA 1 
+ - seconds until the next available time 0.368000
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RD: processing MPLS frame "RC00500H3MESSAGE_4_FROM_H20"
+RD: decapsulated packet "00H3MESSAGE_4_FROM_H20" from MPLS frame "RC00500H3MESSAGE_4_FROM_H20"
+RD: forwarding frame "N00H3MESSAGE_4_FROM_H20" from interface 1 to 1
+RA: encapsulated packet "00H3MESSAGE_2_FROM_H10" as MPLS frame "RC00500H3MESSAGE_2_FROM_H10"
+RA: processing MPLS frame "RC00500H3MESSAGE_2_FROM_H10"
+RA: forwarding frame "MRC00500H3MESSAGE_2_FROM_H10" from interface 0 to 1
+RA: encapsulated packet "00H3MESSAGE_2_FROM_H20" as MPLS frame "RC00500H3MESSAGE_2_FROM_H20"
+RA: processing MPLS frame "RC00500H3MESSAGE_2_FROM_H20"
+RA: forwarding frame "MRC00500H3MESSAGE_2_FROM_H20" from interface 1 to 1
+Link RA-3 - RC-0: transmitting frame "MRC00500H3MESSAGE_0_FROM_H10" on RA 3 -> RC 0 
+ - seconds until the next available time 0.447998
+ - queue size 3
+ - Priority 0 Packets 3
+ - Priority 1 Packets 0
+
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_4_FROM_H10" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839999
+ - queue size 1
+ - Priority 0 Packets 1
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_4_FROM_H10"
+RC: processing MPLS frame "RC00500H3MESSAGE_0_FROM_H10"
+RC: forwarding frame "MRC00500H3MESSAGE_0_FROM_H10" from interface 0 to 1
+Link RC-1 - RD-1: transmitting frame "MRC00500H3MESSAGE_0_FROM_H10" on RC 1 -> RD 1 
+ - seconds until the next available time 0.447999
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RD: processing MPLS frame "RC00500H3MESSAGE_0_FROM_H10"
+RD: decapsulated packet "00H3MESSAGE_0_FROM_H10" from MPLS frame "RC00500H3MESSAGE_0_FROM_H10"
+RD: forwarding frame "N00H3MESSAGE_0_FROM_H10" from interface 1 to 1
+Link RB-1 - RD-0: transmitting frame "MRB00500H3MESSAGE_1_FROM_H21" on RB 1 -> RD 0 
+ - seconds until the next available time 2.239998
+ - queue size 2
+ - Priority 0 Packets 0
+ - Priority 1 Packets 2
+
+RD: processing MPLS frame "RB00500H3MESSAGE_1_FROM_H21"
+RD: decapsulated packet "00H3MESSAGE_1_FROM_H21" from MPLS frame "RB00500H3MESSAGE_1_FROM_H21"
+RD: forwarding frame "N00H3MESSAGE_1_FROM_H21" from interface 0 to 1
+Link RA-3 - RC-0: transmitting frame "MRC00500H3MESSAGE_0_FROM_H20" on RA 3 -> RC 0 
+ - seconds until the next available time 0.447997
+ - queue size 2
+ - Priority 0 Packets 2
+ - Priority 1 Packets 0
+
+RC: processing MPLS frame "RC00500H3MESSAGE_0_FROM_H20"
+RC: forwarding frame "MRC00500H3MESSAGE_0_FROM_H20" from interface 0 to 1
+Link RC-1 - RD-1: transmitting frame "MRC00500H3MESSAGE_0_FROM_H20" on RC 1 -> RD 1 
+ - seconds until the next available time 0.447999
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RD: processing MPLS frame "RC00500H3MESSAGE_0_FROM_H20"
+RD: decapsulated packet "00H3MESSAGE_0_FROM_H20" from MPLS frame "RC00500H3MESSAGE_0_FROM_H20"
+RD: forwarding frame "N00H3MESSAGE_0_FROM_H20" from interface 1 to 1
+Link RA-3 - RC-0: transmitting frame "MRC00500H3MESSAGE_2_FROM_H10" on RA 3 -> RC 0 
+ - seconds until the next available time 0.447998
+ - queue size 1
+ - Priority 0 Packets 1
+ - Priority 1 Packets 0
+
+RC: processing MPLS frame "RC00500H3MESSAGE_2_FROM_H10"
+RC: forwarding frame "MRC00500H3MESSAGE_2_FROM_H10" from interface 0 to 1
+Link RC-1 - RD-1: transmitting frame "MRC00500H3MESSAGE_2_FROM_H10" on RC 1 -> RD 1 
+ - seconds until the next available time 0.447998
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RD: processing MPLS frame "RC00500H3MESSAGE_2_FROM_H10"
+RD: decapsulated packet "00H3MESSAGE_2_FROM_H10" from MPLS frame "RC00500H3MESSAGE_2_FROM_H10"
+RD: forwarding frame "N00H3MESSAGE_2_FROM_H10" from interface 1 to 1
+Link RA-3 - RC-0: transmitting frame "MRC00500H3MESSAGE_2_FROM_H20" on RA 3 -> RC 0 
+ - seconds until the next available time 0.447998
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RC: processing MPLS frame "RC00500H3MESSAGE_2_FROM_H20"
+RC: forwarding frame "MRC00500H3MESSAGE_2_FROM_H20" from interface 0 to 1
+Link RC-1 - RD-1: transmitting frame "MRC00500H3MESSAGE_2_FROM_H20" on RC 1 -> RD 1 
+ - seconds until the next available time 0.447998
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RD: processing MPLS frame "RC00500H3MESSAGE_2_FROM_H20"
+RD: decapsulated packet "00H3MESSAGE_2_FROM_H20" from MPLS frame "RC00500H3MESSAGE_2_FROM_H20"
+RD: forwarding frame "N00H3MESSAGE_2_FROM_H20" from interface 1 to 1
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_1_FROM_H21" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839998
+ - queue size 5
+ - Priority 0 Packets 5
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_1_FROM_H21"
+Link RB-1 - RD-0: transmitting frame "MRB00500H3MESSAGE_3_FROM_H11" on RB 1 -> RD 0 
+ - seconds until the next available time 2.239998
+ - queue size 1
+ - Priority 0 Packets 0
+ - Priority 1 Packets 1
+
+RD: processing MPLS frame "RB00500H3MESSAGE_3_FROM_H11"
+RD: decapsulated packet "00H3MESSAGE_3_FROM_H11" from MPLS frame "RB00500H3MESSAGE_3_FROM_H11"
+RD: forwarding frame "N00H3MESSAGE_3_FROM_H11" from interface 0 to 1
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_3_FROM_H11" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839998
+ - queue size 5
+ - Priority 0 Packets 5
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_3_FROM_H11"
+Link RB-1 - RD-0: transmitting frame "MRB00500H3MESSAGE_3_FROM_H21" on RB 1 -> RD 0 
+ - seconds until the next available time 2.239998
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+RD: processing MPLS frame "RB00500H3MESSAGE_3_FROM_H21"
+RD: decapsulated packet "00H3MESSAGE_3_FROM_H21" from MPLS frame "RB00500H3MESSAGE_3_FROM_H21"
+RD: forwarding frame "N00H3MESSAGE_3_FROM_H21" from interface 0 to 1
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_3_FROM_H21" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839998
+ - queue size 5
+ - Priority 0 Packets 5
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_3_FROM_H21"
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_0_FROM_H20" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839999
+ - queue size 4
+ - Priority 0 Packets 4
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_0_FROM_H20"
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_2_FROM_H10" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839997
+ - queue size 3
+ - Priority 0 Packets 3
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_2_FROM_H10"
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_2_FROM_H20" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839998
+ - queue size 2
+ - Priority 0 Packets 2
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_2_FROM_H20"
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_4_FROM_H20" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839998
+ - queue size 1
+ - Priority 0 Packets 1
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_4_FROM_H20"
+Link RD-2 - H3-0: transmitting frame "N00H3MESSAGE_0_FROM_H10" on RD 2 -> H3 0 
+ - seconds until the next available time 1.839980
+ - queue size 0
+ - Priority 0 Packets 0
+ - Priority 1 Packets 0
+
+H3: received packet "00H3MESSAGE_0_FROM_H10"
+H3: Ending
+RD: Ending
+RC: Ending
+Network: Ending
+RA: Ending
+H2: Ending
+RB: Ending
+H1: Ending
+All simulation threads joined

@@ -80,9 +80,7 @@ class Link:
                 if intf_a.next_avail_time <= time.time():
                     #transmit the packet
                     pkt_S = intf_a.get('out')
-                    print("Packet in Link: " + pkt_S)
                     intf_b.put(pkt_S, 'in')
-                    priority = pkt_S[1]
                     #update the next free time of the interface according to serialization delay
                     pkt_size = len(pkt_S)*8 #assuming each character is 8 bits
                     intf_a.next_avail_time = time.time() + pkt_size/intf_a.capacity

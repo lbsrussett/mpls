@@ -235,20 +235,9 @@ class Router:
             #process the packet as network, or MPLS
             if fr.type_S == "Network":
                 p = NetworkPacket.from_byte_S(pkt_S) #parse a packet out
-                # priority = p.priority
-                # if priority is 0:
-                #     self.priority_0_count += 1
-                # else:
-                #     self.priority_1_count += 1
                 self.process_network_packet(p, i)
             elif fr.type_S == "MPLS":
-                # TODO: handle MPLS frames
                 m_fr = MPLSFrame.from_byte_S(pkt_S) #parse a frame out
-                # priority = m_fr.priority
-                # if priority is 0:
-                #     self.priority_0_count += 1
-                # else:
-                #     self.priority_1_count += 1
                 #send the MPLS frame for processing
                 self.process_MPLS_frame(m_fr, i)
             else:
@@ -259,7 +248,6 @@ class Router:
     #  @param i Incoming interface number for packet p
     def process_network_packet(self, pkt, i):
         priority = pkt.priority
-        print("Priority: " + str(priority))
         if int(priority) is 0:
             label = 'RC'
         else:

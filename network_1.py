@@ -232,7 +232,7 @@ class Router:
     #  @param i Incoming interface number for the frame
     def process_MPLS_frame(self, m_fr, i):
         print('%s: processing MPLS frame "%s"' % (self, m_fr.__str__()))
-        print("forward " + str(forward))
+        forward = self.frwd_tbl_D.get(i)
         if forward:
             pkt = m_fr
             fr = LinkFrame('MPLS', pkt.to_byte_S())
